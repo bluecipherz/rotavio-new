@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'baseFunctions';
+
+box{
+  display: block;
+  float: left;
+  position: relative;
+  @include border-box();
+}
+
+basicFond{
+  font-family:g-m;
+  font-size: 14px;
+}
+
+//@import '_modules/whoweare';
+//@import '_modules/home';
+//@import '_modules/explore';
+@import '_modules/moduleCss';
