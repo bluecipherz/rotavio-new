@@ -54,9 +54,9 @@ angular.module('BczUiApp')
       paraService.addPara('home', 'pageBlock4', {
         id: '#pageBlock4',
         callback: function (el) {
-          var scale = Math.min((el.top + window.innerHeight)/ window.innerHeight / 5, 1.5) + 1;
-          var marginLeft = (window.innerHeight - $('#hm-building2').width()) / 2;
-          $('#hm-building2').css({'transform' : 'scale('+scale+')', 'margin-left':marginLeft});
+          // var scale = Math.min((el.top + window.innerHeight)/ window.innerHeight / 5, 1.5) + 1;
+          // var marginLeft = (window.innerHeight - $('#hm-building2').width()) / 2;
+          // $('#hm-building2').css({'transform' : 'scale('+scale+')', 'margin-left':marginLeft});
         },
       });
 
@@ -78,6 +78,7 @@ angular.module('BczUiApp')
 
       paraService.addPara('home', 'hm-dleaf', { id:'#hm-dleaf', translate : 0, rotate:5.1})
       paraService.addPara('home', 'cloud-1', { id:'#cloud-1', translate : 0.15})
+      paraService.addPara('home', 'hm-tab', { id:'#hm-tab', translate : 0.15})
 
 
 

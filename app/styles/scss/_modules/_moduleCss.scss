@@ -531,6 +531,18 @@ basicFond {
 .hp-landing .hml-video video {
   width: 100%; }
 
+.pbc-heading-2.sp{
+  font-family: g-l!important;
+  span{
+    font-family: g-b!important;
+    color:rgb(46, 204, 113)!important;
+  }
+}
+
+.pageBlock4{
+  background-color: rgba(0,0,0,0.2);
+}
+
 .pageBlock.bg-black {
   background: #444; }
 
@@ -657,7 +669,16 @@ basicFond {
   height: auto;
   z-index: 1;
   opacity: 0.7; }
-
+.paraDiv{
+  .hm-tab{
+    @extend box;
+    position: absolute;
+    z-index: 9999;
+    bottom:-130px;
+    right:10%;
+    width: 50%;
+  }
+}
 .footer-bottom {
   width: 100%;
   z-index: 90;
@@ -789,7 +810,15 @@ basicFond {
     margin-top: 175px; }
 
   .footer-bottom .foo-right .foor-cont {
-    font-size: 98%; } }
+    font-size: 98%; }
+
+  .paraDiv{
+    .hm-tab{
+      bottom:60px;
+    }
+  }
+
+}
 @media only screen and (max-width: 800px) {
   .pageBlock .pb-content.-center .pbc-heading-1,
   .pageBlock .pb-content.-center .pbc-heading-2,
@@ -837,7 +866,16 @@ basicFond {
     width: 100%; }
 
   .footer-bottom .foo-right .foor-foot {
-    bottom: 40px; } }
+    bottom: 40px; }
+
+  .paraDiv{
+    .hm-tab{
+      width: 100%;
+      right: 0%;
+      bottom:-33vh;
+    }
+  }
+}
 @media only screen and (max-width: 450px) {
   .header {
     background: #333;
@@ -905,7 +943,38 @@ basicFond {
     width: 100%;
     text-align: center;
     right: 0;
-    left: 0; } }
+    left: 0; }
+
+  .paraDiv{
+    .hm-tab{
+      bottom: 10vh;
+    }
+  }
+
+  .pb-content1{
+    background: #fff;
+    .pbc-heading-1,
+    .pbc-heading-2,
+    .pbc-description {
+      color: #000!important; }
+    .pbc-button:hover {
+      background: #000!important;
+      color: #fff!important; }
+    .pbc-button {
+      border: 1px solid #000!important;
+      color: #000!important;
+      background: transparent!important; }
+    .pbc-description {
+      background: transparent!important;
+      padding: 0!important; }
+  }
+}
+
+
+
+
+
+
 .fullH {
   width: 100%;
   height: 100vh; }
@@ -921,11 +990,11 @@ basicFond {
 
 .exp-progress {
   position: fixed;
-  width: 200px;
+  width: 25%;
   height: 14px;
   margin-top: -7px;
   top: 50%;
-  left: 30%;
+  left: 15%;
   /* Chrome/Safari */
   /* Firefox */
   -ms-box-sizing: border-box;
@@ -938,7 +1007,7 @@ basicFond {
 .exp-progress .expp-loaded {
   position: relative;
   float: left;
-  width: 0%;
+  width: 0;
   height: 100%;
   background: #fff;
   transition: 1s; }
@@ -1153,6 +1222,12 @@ basicFond {
   background: #fff; }
 
 @media only screen and (max-width: 800px) {
+  .exp-progress {
+    width: 30%;
+    margin-top: -7px;
+    top: 25%;
+    left: 35%;
+  }
   .exploreCanvas {
     width: 100% !important;
     bottom: 50% !important;
@@ -1183,6 +1258,9 @@ basicFond {
     color: #555;
     border-color: #999; } }
 @media only screen and (max-width: 450px) {
+  .exp-progress {
+    margin-top: 40px;
+  }
   .fullH {
     position: fixed;
     top: 100px;
@@ -1202,4 +1280,5 @@ basicFond {
     padding: 30px; }
   .exploreLanding .el-right .elr-cont {
     font-size: 15px;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+}

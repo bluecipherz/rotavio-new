@@ -8,12 +8,13 @@
     </div>
 
     <div class="pageBlock pageBlock1 pageBlock100" id="pageBlock1">
-        <div class="pb-content">
+        <div class="pb-content pb-content1">
             <div class="pbc-heading-1">Featuring</div>
             <div class="pbc-heading-2">Ankush</div>
             <div class="pbc-description">
-                Ankush performs fully autonomous missions. The vehicle platform is designed to
-                seamlessly integrate with a variety of mounts and sensors for a wide range of applications.
+                Ankush performs fully autonomous missions.
+                The vehicle platform is designed to seamlessly integrate with a
+                variety of mounts and sensors for a wide range of applications.
             </div>
             <div class="pbc-button" ng-click="vm.go(0)">EXPLORE</div>
         </div>
@@ -23,8 +24,9 @@
         <div class="pb-content -right -alt">
             <div class="pbc-heading-1">High Precision Servo</div>
             <div class="pbc-description">
-                Rotavio Labs Servo is a compact, high quality high precision Servomotor for use in Aerospace,
-                Radio control, Automation and high precision Robotics
+                Rotavio Labs Servo is a compact, high quality high precision
+                Servomotor for use in Aerospace, Radio control, Automation and
+                high precision Robotics
             </div>
             <div class="pbc-button" ng-click="vm.go(1)">EXPLORE</div>
         </div>
@@ -35,9 +37,9 @@
         <div class="pb-content -alt">
             <div class="pbc-heading-1">Helicopter Dynamics Simulation and Analysis Software Suite</div>
             <div class="pbc-description">
-                We have developed a comprehensive Rotor Dynamics and Analysis software (RLDyn), Aeroelastic
-                and Flight Dynamics Simulation software (RLCar), Helicopter Control Systems Simulation
-                software (RLCon).
+                We have developed a comprehensive Rotor Dynamics and Analysis software (RLDyn),
+                Aeroelastic and Flight Dynamics Simulation software (RLCar), Helicopter Control
+                Systems Simulation software (RLCon).
             </div>
             <div class="pbc-button" ng-click="vm.go(2)">EXPLORE</div>
         </div>
@@ -46,18 +48,18 @@
         </div>
     </div>
 
-    <div class="pageBlock pageBlock100" id="pageBlock4">
+    <div class="pageBlock pageBlock4" id="pageBlock4">
         <div class="pb-content">
             <div class="pbc-heading-1">Mission Planning and Feedback System</div>
             <div class="pbc-description">
-                Helps plan missions on the fly and feeds the sensors output right to the screen in realtime.
+                Helps plan missions on the fly and feeds the sensors output right to the screen in realtime
             </div>
         </div>
     </div>
 
     <div class="pageBlock bg-black">
         <div class="pb-content -center">
-            <div class="pbc-heading-2">INTO THE FUTURE</div>
+            <div class="pbc-heading-2 sp">INTO THE <span>FUTURE</span></div>
             <div class="pbc-description">
                 To be a premier commercial research and development center
                 for all Helicopter Technology ranging from
@@ -67,7 +69,7 @@
     </div>
 </div>
 
-<div class="paraDiv" id="bg1" ng-if="!vm.hideBg1">
+<div class="paraDiv" id="bg1" ng-show="!vm.hideBg1">
     <img class="hm-building bg" id="hm-building" src="images/home/b1.jpg">
     <div class="hm-drone" id="hm1-drone">
         <div class="droneContainer">
@@ -78,9 +80,9 @@
     <img class="cloud cloud-1" id="cloud-1" src="images/home/clouds/cloud3.png">
 </div>
 
-<div class="paraDiv" id="bg2" ng-if="vm.hideBg1">
+<div class="paraDiv" id="bg2" ng-show="vm.hideBg1">
     <img class="hm-building bg" id="hm-building2" src="images/home/b2.jpg">
-    <img class="hm-tab" src="images/home/tab.png">
+    <img class="hm-tab" id="hm-tab" src="images/home/tab.png">
 </div>
 
 <div class="footer-bottom">

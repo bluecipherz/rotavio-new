@@ -6,28 +6,24 @@ angular.module('BczUiApp')
         var vm = this;
         paraService.pageLoaded();
 
+        if(!paraService.selectedTab) {
+            vm.selectedTab = { id:0, camId : 0 };
+            paraService.selectedTab = vm.selectedTab;
+        }else{
+            vm.selectedTab = paraService.selectedTab;
+        }
+
         vm.selectTab = function (id) {
             vm.selectedTab.id = id;
             vm.selectedTab.camId = 0;
             paraService.selectedTab = vm.selectedTab;
         }
 
-
-        var vid = null;
-        if($stateParams.id ) vid =  parseInt($stateParams.id);
-        vm.selectedTab = { id:0, camId : 0 };
-
-        if(vid != null){
-            vm.selectTab(vid)
-        }else{
-            if(!paraService.selectedTab) {
-                vm.selectedTab = { id:0, camId : 0 };
-                paraService.selectedTab = vm.selectedTab;
-            }else{
-                vm.selectedTab = paraService.selectedTab;
-            }
-            vm.selectTab(vm.selectedTab.id);
+        if($stateParams.id){
+            vm.selectTab($stateParams.id);
         }
+
+
 
 
 
