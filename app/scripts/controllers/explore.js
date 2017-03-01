@@ -98,21 +98,21 @@ angular.module('BczUiApp')
 
             renderer.setSize(viewportWidth, viewportHeight);
             // to antialias the shadow
-            renderer.shadowMap.enabled = true;
-            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-            renderer.shadowCameraFar = 40000;
-            renderer.shadowCameraNear = 0.05;
-
-
-            renderer.sortObjects = false;
-            renderer.shadowMapWidth = 3072;
-            renderer.shadowMapHeight = 3072
-            renderer.shadowCameraNear = 2;
-            renderer.shadowCameraFar = 40;
-            renderer.shadowMapBias = -0.00022;
-            renderer.shadowMapDarkness = 0.55;
-            renderer.shadowMapSoft      = true;
-            renderer.physicallyBasedShading = true;
+            // renderer.shadowMap.enabled = true;
+            // renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+            // renderer.shadowCameraFar = 40000;
+            // renderer.shadowCameraNear = 0.05;
+            //
+            //
+            // renderer.sortObjects = false;
+            // renderer.shadowMapWidth = 3072;
+            // renderer.shadowMapHeight = 3072
+            // renderer.shadowCameraNear = 2;
+            // renderer.shadowCameraFar = 40;
+            // renderer.shadowMapBias = -0.00022;
+            // renderer.shadowMapDarkness = 0.55;
+            // renderer.shadowMapSoft      = true;
+            // renderer.physicallyBasedShading = true;
 
 
             renderer.setClearColor( 0x000000, 0 ); // the default
@@ -140,7 +140,7 @@ angular.module('BczUiApp')
                 var ground = new THREE.Mesh(geometry, material);
 
                 ground.position.y = -0.54;
-                ground.receiveShadow = true;
+                // ground.receiveShadow = true;
 
                 var material = new THREE.MeshPhongMaterial({color : 0x550000, vertexColors : THREE.VertexColors, specular: 0x555555, shininess: 100,});
                 var materialProp = new THREE.MeshPhongMaterial({color : 0x111111, vertexColors : THREE.VertexColors, specular: 0x555555, shininess: 10,});
@@ -174,8 +174,8 @@ angular.module('BczUiApp')
                     loader.load('models/drone1/bodynaked.js', function (geo, mat) {
                         geo.computeVertexNormals();
                         var gMesh = new THREE.Mesh(geo, material);
-                        gMesh.shadowCameraFar  = 10000;
-                        gMesh.castShadow = true;
+                        // gMesh.shadowCameraFar  = 10000;
+                        // gMesh.castShadow = true;
                         geoMesh.add(gMesh);
                         // gMesh.receiveShadow = true;
                     },onProgress)
@@ -183,9 +183,9 @@ angular.module('BczUiApp')
                     loader.load('models/drone1/mainprop.js', function (geo, mat) {
                         geo.computeVertexNormals();
                         mainprop = new THREE.Mesh(geo, materialProp);
-                        mainprop.castShadow = true;
+                        // mainprop.castShadow = true;
                         // gMesh.receiveShadow = true;
-                        mainprop.shadowCameraFar  = 10000;
+                        // mainprop.shadowCameraFar  = 10000;
                         geoMesh.add(mainprop);
                         paraService.droneBody = geoMesh;
                         startAnimation();
@@ -194,9 +194,9 @@ angular.module('BczUiApp')
                     loader.load('models/drone1/backprop.js', function (geo, mat) {
                         // geo.computeVertexNormals();
                         backprop = new THREE.Mesh(geo, materialProp);
-                        backprop.castShadow = true;
+                        // backprop.castShadow = true;
                         // gMesh.receiveShadow = true;
-                        backprop.shadowCameraFar  = 10000;
+                        // backprop.shadowCameraFar  = 10000;
                         backprop.position.z = 0.10;
                         backprop.position.y = -0.4;
                         backprop.position.x = -3.62;
@@ -208,9 +208,9 @@ angular.module('BczUiApp')
                     loader.load('models/drone1/glass.js', function (geo, mat) {
                         geo.computeVertexNormals();
                         var gMesh = new THREE.Mesh(geo, materialGlass);
-                        gMesh.castShadow = true;
+                        // gMesh.castShadow = true;
                         // gMesh.receiveShadow = true;
-                        gMesh.shadowCameraFar  = 10000;
+                        // gMesh.shadowCameraFar  = 10000;
                         gMesh.position.z = 0;
                         gMesh.position.y = -0.15;
                         gMesh.position.x = 0.50;
@@ -223,9 +223,9 @@ angular.module('BczUiApp')
                         geo.computeVertexNormals();
                         var Smat = new THREE.MeshPhongMaterial({color : 0x440000, vertexColors : THREE.VertexColors, specular: 0x555555, shininess: 100,});
                         var gMesh = new THREE.Mesh(geo, Smat);
-                        gMesh.castShadow = true;
+                        // gMesh.castShadow = true;
                         // gMesh.receiveShadow = true;
-                        gMesh.shadowCameraFar  = 10000;
+                        // gMesh.shadowCameraFar  = 10000;
                         gMesh.position.z = 6;
                         gMesh.position.y = -0.3;
                         gMesh.position.x = -6;
@@ -240,9 +240,9 @@ angular.module('BczUiApp')
                         geo.computeVertexNormals();
                         var Smat = new THREE.MeshPhongMaterial({color : 0x111111, vertexColors : THREE.VertexColors, specular: 0x555555, shininess: 100,});
                         var gMesh = new THREE.Mesh(geo, Smat);
-                        gMesh.castShadow = true;
+                        // gMesh.castShadow = true;
                         // gMesh.receiveShadow = true;
-                        gMesh.shadowCameraFar  = 10000;
+                        // gMesh.shadowCameraFar  = 10000;
                         gMesh.position.z = -6;
                         gMesh.position.y = -0.53;
                         gMesh.position.x = -6;
@@ -316,19 +316,19 @@ angular.module('BczUiApp')
             // directionalLight = new THREE.PointLight(0xffffff);
             directionalLight.position.set(x, y, z);
             if(shadow){
-                directionalLight.castShadow = true;
-                directionalLight.shadow.camera.far = 1000;
-                directionalLight.shadow.camera.near = 0.1;
-                directionalLight.intensity = 1.7;
-                directionalLight.shadow.camera.visible = true;
-                directionalLight.shadow.camera.right    =  7;
-                directionalLight.shadow.camera.left     = -7;
-                directionalLight.shadow.camera.top      =  7;
-                directionalLight.shadow.camera.bottom   = -7;
-                // directionalLight.shadowBias = 0.0001;
-                directionalLight.shadowDarkness = 0.2;
-                directionalLight.shadowMapWidth = 3048;
-                directionalLight.shadowMapHeight = 3048;
+                // directionalLight.castShadow = true;
+                // directionalLight.shadow.camera.far = 1000;
+                // directionalLight.shadow.camera.near = 0.1;
+                // directionalLight.intensity = 1.7;
+                // directionalLight.shadow.camera.visible = true;
+                // directionalLight.shadow.camera.right    =  7;
+                // directionalLight.shadow.camera.left     = -7;
+                // directionalLight.shadow.camera.top      =  7;
+                // directionalLight.shadow.camera.bottom   = -7;
+                // // directionalLight.shadowBias = 0.0001;
+                // directionalLight.shadowDarkness = 0.2;
+                // directionalLight.shadowMapWidth = 3048;
+                // directionalLight.shadowMapHeight = 3048;
             }
 
             geoMesh.add(directionalLight);
@@ -429,10 +429,13 @@ angular.module('BczUiApp')
 
         function onWindowResize(){
 
-            if(camera) camera.aspect = (window.innerWidth * 0.55) / window.innerHeight;
+            var resizeRatio = 1;
+            if(window.innerWidth > 800) resizeRatio = 0.55;
+
+            if(camera) camera.aspect = (window.innerWidth * resizeRatio) / window.innerHeight;
             if(camera) camera.updateProjectionMatrix();
 
-            if(renderer) renderer.setSize((window.innerWidth * 0.55), window.innerHeight );
+            if(renderer) renderer.setSize((window.innerWidth * resizeRatio), window.innerHeight );
 
         }
 
