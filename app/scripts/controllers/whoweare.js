@@ -129,6 +129,13 @@ angular.module('BczUiApp')
             'Fellow, Indian National Academy of Engineering',
             'Expertise in Helicopter Technology & Design'
           ]
+        },
+        {
+          id: 11, name: 'Sidharth Middela', img: 'images/wwa/team/sidharth.png',
+          domain: 'Advisor, Product & Business Development',
+          details: [
+            'Masters in Computer Science, IIIT Hyderabad (2007)'
+          ]
         }
       ];
 
