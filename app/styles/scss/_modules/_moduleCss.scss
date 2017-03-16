@@ -62,7 +62,7 @@ basicFond {
 .wwa-al-left img {
   position: absolute;
   left: 0;
-  height: 100%; }
+  width: 100%; }
 
 .wwa-al-right {
   width: 40vw;
@@ -77,8 +77,10 @@ basicFond {
   font-family: g-b; }
 .wwa-al-right .wwa-c-cont {
   font-family: g-m;
-  font-size: 150%;
+  font-size: 100%;
   width: 72%;
+  text-align: justify!important;
+  text-justify: inter-word!important;
   line-height: 140%;
   margin-top: 50px; }
 
@@ -155,7 +157,8 @@ basicFond {
   right: 0;
   float: left; }
 .wwa-itemSet .wwa-item .wwai-name.-small {
-  font-size: 130%;
+  //font-size: 130%;
+  font-size: 16px;
   color: #006383;
   margin-top: 0;
   height: auto; }
@@ -168,7 +171,7 @@ basicFond {
   float: left;
   text-align: center;
   font-family: g-m;
-  font-size: 150%;
+  font-size: 20px;
   margin-top: 30px;
   line-height: 140%; }
 .wwa-itemSet .wwa-item .wwai-img {
@@ -477,7 +480,26 @@ basicFond {
   .wwa-itemSet .wwa-item.active .wwa-item-background .wwa-item-cont {
     top: 140px;
     bottom: 40px;
-    overflow: auto; } }
+    overflow: auto; }
+
+  .wwai-data .wwaid-item{
+    font-size: 13px!important;
+  }
+  .wwai-data{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .wwai-data .wwaid-head{
+    font-size: 15px!important;
+  }
+  .wwai-data .wwaid-name{
+    font-size: 18px;
+  }
+  .wwa-itemSet .wwa-item.active .wwa-item-cont{
+    padding-bottom: 0px;
+  }
+}
 .header.active .headerBackground {
   top: 0px; }
 .header.active ul li {
