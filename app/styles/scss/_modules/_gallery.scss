@@ -1,0 +1,38 @@
+box{
+  display: block;
+  float: left;
+  @include border-box();
+}
+.gallery{
+  @extend box;
+  width: 100%;
+  height: 100%;
+  .gbox{
+    @extend box;
+    width: 50vw;
+    height: 38vw;
+    margin: 100px 25vw;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .gallery{
+    .gbox{
+      width: 70vw;
+      height: 55vw;
+      margin: 100px 15vw;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .gallery{
+    .gbox{
+      width: 90vw;
+      height: 70vw;
+      margin: 100px 5vw;
+    }
+  }
+}

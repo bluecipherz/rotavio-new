@@ -1,7 +1,7 @@
 /*Lap*/
 /*Tab*/
 /*Mobile*/
-box, .paraDiv .hm-tab {
+box, .gallery, .gallery .gbox, .paraDiv .hm-tab {
   display: block;
   float: left;
   position: relative;
@@ -18,10 +18,40 @@ basicFond {
   font-family: g-m;
   font-size: 14px; }
 
+box, .gallery, .gallery .gbox, .paraDiv .hm-tab {
+  display: block;
+  float: left;
+  -webkit-box-sizing: border-box;
+  /* Chrome/Safari */
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -ms-box-sizing: border-box;
+  /* IE10+ */
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.gallery {
+  width: 100%;
+  height: 100%; }
+  .gallery .gbox {
+    width: 50vw;
+    height: 38vw;
+    margin: 100px 25vw; }
+
+@media only screen and (max-width: 800px) {
+  .gallery .gbox {
+    width: 70vw;
+    height: 55vw;
+    margin: 100px 15vw; } }
+@media only screen and (max-width: 500px) {
+  .gallery .gbox {
+    width: 90vw;
+    height: 70vw;
+    margin: 100px 5vw; } }
 /*Lap*/
 /*Tab*/
 /*Mobile*/
-box, .paraDiv .hm-tab, .header .logo, .header ul, .header ul li, .homePage, .hp-landing, .hp-landing .hml-video, .pageBlock, .pageBlock .pb-content, .pageBlock .pb-content .pbc-heading-1,
+box, .gallery, .gallery .gbox, .paraDiv .hm-tab, .header .logo, .header ul, .header ul li, .homePage, .hp-landing, .hp-landing .hml-video, .pageBlock, .pageBlock .pb-content, .pageBlock .pb-content .pbc-heading-1,
 .pageBlock .pb-content .pbc-heading-2,
 .pageBlock .pb-content .pbc-description, .pageBlock .pb-content .pbc-button, .pageBlock .hmt2-servo, .paraDiv, .paraDiv .hm-drone, .paraDiv .hm-drone .droneContainer {
   display: block;
@@ -1024,7 +1054,7 @@ basicFond {
     margin-right: 0; }
 
   .header ul li {
-    width: 33.3333%;
+    width: 25%;
     text-align: center; }
 
   .header.active .headerBackground {

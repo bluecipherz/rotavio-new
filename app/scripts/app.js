@@ -50,6 +50,13 @@ angular
             controller: 'ExploreCtrl',
             controllerAs: 'vm'
           })
+          .state('gallery', {
+            url: '/gallery',
+            params : {id : null},
+            templateUrl: 'views/gallery.html',
+            controller: 'GalleryCtrl',
+            controllerAs: 'vm'
+          })
     })
     .run(function($rootScope, $location, $state, $stateParams, $cookieStore) {
 

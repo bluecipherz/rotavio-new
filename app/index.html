@@ -27,7 +27,7 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<div class="header" ng-class="{'active': vm.solidHeader || vm.state.current.name == 'explore' || vm.state.current.name == 'whoweare'}"
+<div class="header" ng-class="{'active': vm.solidHeader || vm.state.current.name == 'explore' || vm.state.current.name == 'whoweare' || vm.state.current.name == 'gallery'}"
      ng-controller="HeaderController as vm">
     <div class="headerBackground"></div>
     <div class="logo"><img src="images/logo/logo.png"></div>
@@ -35,6 +35,7 @@
         <li ui-sref="home" ng-class="{'active': vm.state.current.name == 'home'}">HOME</li>
         <li ui-sref="explore" ng-class="{'active': vm.state.current.name == 'explore'}">EXPLORE</li>
         <li ui-sref="whoweare" ng-class="{'active': vm.state.current.name == 'whoweare'}">TEAM</li>
+        <li ui-sref="gallery" ng-class="{'active': vm.state.current.name == 'gallery'}">GALLERY</li>
     </ul>
 </div>
 <div class="viewPort" ui-view></div>
@@ -68,6 +69,7 @@
 <script src="scripts/services/paraService.js"></script>
 <script src="scripts/controllers/whoweare.js"></script>
 <script src="scripts/controllers/explore.js"></script>
+<script src="scripts/controllers/gallary.js"></script>
 
 
 
